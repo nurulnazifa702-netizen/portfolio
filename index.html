@@ -1,25 +1,23 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nurul Nazifa — Portfolio</title>
   
-  <!-- THIS IS THE MAGIC LINE: -->
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css"> 
-  
 </head>
 <body>
-    <script src="script.js"></script>
 
-  <!-- Navigation bar (persistent) -->
+  <!-- Navigation Bar at the very top -->
   <header>
     <nav>
-      <a href="#home" class="logo">Nurul Nazifa</a>
+      <a href="#home" class="logo">NURUL NAZIFA | Network Computing</a>
       <ul>
         <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#goals">Goals</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -27,53 +25,60 @@
 
   <main>
 
-    <!-- Section 1: Welcome -->
+    <!-- HOME -->
     <section id="home">
-      <h1>Welcome to My Home Page</h1>
-      <p>Hi, I'm Nurul Nazifa Binti Kamrulzaman, a 3rd year student at UNIMAS learning web application development.</p>
-      <a href="#about" class="btn">Learn more about me</a>
+      <h1>Welcome to My Portfolio</h1>
+      <p>Hi, I'm Nurul Nazifa Binti Kamrulzaman, a 3rd-year student at UNIMAS learning web application development.</p>
     </section>
 
-    <!-- Section 2: About Me -->
+    <!-- PROJECTS (Simple for now) -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <p>Here are some of the academic projects I have completed:</p>
+      
+      <!-- These are just simple text lines for now, no tables/grids -->
+      <ul>
+        <li><strong>Project 1:</strong> Personal Blog </li>
+        <li><strong>Project 2:</strong> Emergency Reporting System for PKS</li>
+        <li><strong>Project 3:</strong> Fitlife Wellness Centre Database System</li>
+        <li><strong>Project 4:</strong> </li>
+        <li><strong>Project 5:</strong> </li>
+      </ul>
+    </section>
+
+    <!-- ABOUT -->
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        My name is Nurul Nazifa Binti Kamrulzaman. I am currently in my 3rd year
-        at UNIMAS. I am interested in learning web application development to
-        gain new skills and build real projects.
-      </p>
+      <p>My name is Nurul Nazifa Binti Kamrulzaman. I am currently in my 3rd year at UNIMAS. I am interested in learning web application development to gain new skills and build real projects.</p>
     </section>
 
-    <!-- Section 3: Hobbies -->
-    <section id="hobbies">
-      <h2>My Hobbies</h2>
-      <ul>
-        <li>Watching movies</li>
-        <li>Cooking</li>
-      </ul>
-    </section>
-
-    <!-- Section 4: Goals -->
-    <section id="goals">
-      <h2>My Goals</h2>
-      <ul>
-        <li>Become a skilled and successful web developer</li>
-        <li>Build my own website or application</li>
-        <li>Achieve success in my career and personal life</li>
-      </ul>
-    </section>
-
-    <!-- Section 5: Contact Me -->
+    <!-- CONTACT -->
     <section id="contact">
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:100685@siswa.unimas.my">100685@siswa.unimas.my</a></p>
+      
     </section>
 
   </main>
 
   <footer>
-    <p>2026 Nurul Nazifa. Built with HTML, CSS & JavaScript.</p>
+    <div class="footer-container">
+      <!-- A div specifically to group the links -->
+      <div class="footer-links">
+        <a href="mailto:100685@siswa.unimas.my">Email</a>
+        <a href="#" target="_blank">LinkedIn</a>
+      </div>
+      
+      <!-- A div for the copyright text -->
+      <div>
+        <p>2026 Nurul Nazifa. All rights reserved.</p>
+      </div>
+
+    </div>
   </footer>
+
+  <!-- JAVASCRIPT LINK (Must be at the bottom) -->
+  <script src="script.js"></script>
 
 </body>
 </html>

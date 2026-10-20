@@ -1,29 +1,15 @@
-/* --- 1. GENERAL PAGE STYLES --- */
-body {
-  font-family: Arial, sans-serif; /* Standard, clean font */
-  background-color: #fff0f5;      /* Soft pink background */
-  color: #333333;                 /* Dark grey text (easy to read) */
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;               /* Makes paragraphs easier to read */
-}
-
-/* Smooth scrolling when clicking nav links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* --- 2. NAVIGATION BAR --- */
+/* --- NAV BAR STYLES --- */
 header {
-  background-color: #be185d;      /* Deep pink background */
+  background-color: #be185d; /* The pink color */
   padding: 15px 30px;
-  position: sticky;               /* Keeps the nav bar at the top when scrolling */
+  position: sticky; /* This keeps it at the top when you scroll */
   top: 0;
+  z-index: 1000;
 }
 
 nav {
   display: flex;
-  justify-content: space-between; /* Puts Logo on left, links on right */
+  justify-content: space-between; /* Puts your name on the left, links on the right */
   align-items: center;
 }
 
@@ -35,64 +21,87 @@ nav .logo {
 }
 
 nav ul {
-  display: flex;
-  gap: 20px;                      /* Space between links */
-  list-style: none;               /* REMOVES THE BULLET POINTS */
+  display: flex; /* Forces the list to go sideways, not up and down */
+  gap: 20px;     /* Space between the links */
+  list-style: none; /* REMOVES the bullet points */
   margin: 0;
   padding: 0;
 }
 
 nav a {
   color: white;
-  text-decoration: none;          /* REMOVES THE UNDERLINE */
+  text-decoration: none; /* REMOVES the underline */
   font-weight: bold;
 }
 
-/* Changes color when you hover over a link */
 nav a:hover {
-  color: #fbcfe8; 
+  color: #fbcfe8; /* Changes color slightly when you hover over it */
 }
 
-/* --- 3. MAIN SECTIONS --- */
-section {
-  max-width: 800px;               /* Keeps text from stretching too wide on PC */
-  margin: 0 auto;                 /* Centers the section */
-  padding: 60px 20px;
-  border-bottom: 2px dashed #f9a8d4; /* Adds a nice dashed line between sections */
-}
-
-h1 {
-  color: #be185d;
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-h2 {
-  color: #be185d;
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-/* Style for the "Learn more about me" button */
-.btn {
-  display: inline-block;
-  background-color: #be185d;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;             /* Rounds the corners */
-  margin-top: 15px;
-}
-
-.btn:hover {
-  background-color: #831843;      /* Darker pink when hovered */
-}
-
-/* --- 4. FOOTER --- */
+/* --- FOOTER STYLES --- */
 footer {
-  background-color: #be185d;
+  background-color: #1f2937; /* Dark background */
   color: white;
+  padding: 40px 20px;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+}
+
+/* Style the main container div */
+.footer-container {
+  max-width: 650px;
+  margin: 0 auto; /* Centers the div on the page */
+}
+
+footer h3 {
+  color: #fbcfe8;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+footer p {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Style the links div */
+.footer-links {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center; /* Puts the links in the middle */
+  gap: 20px; /* Space between links */
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #be185d; /* Pink hover effect */
+}
+
+/* Style the copyright div */
+.footer-copyright {
+  border-top: 1px solid #374151; /* A subtle line above the copyright */
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footer-copyright p {
+  font-size: 12px;
+  color: bisque;
+  margin: 0;
+}
+
+/* Styling the Dark Mode button so it fits in the nav bar */
+#theme-btn {
+  background: white;
+  color: #be185d;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
