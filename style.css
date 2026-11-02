@@ -1,107 +1,495 @@
-/* --- NAV BAR STYLES --- */
+/* --- GLOBAL STYLES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* --- NAV BAR --- */
 header {
-  background-color: #be185d; /* The pink color */
-  padding: 15px 30px;
-  position: sticky; /* This keeps it at the top when you scroll */
+  background-color: #ffffff;
+  padding: 15px 40px;
+  position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 nav {
   display: flex;
-  justify-content: space-between; /* Puts your name on the left, links on the right */
+  justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav .logo {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
+  color: #111;
+  font-size: 20px;
+  font-weight: 900;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 
-nav ul {
-  display: flex; /* Forces the list to go sideways, not up and down */
-  gap: 20px;     /* Space between the links */
-  list-style: none; /* REMOVES the bullet points */
-  margin: 0;
-  padding: 0;
+.nav-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  background-color: #f3f4f6;
+  padding: 8px 20px;
+  border-radius: 30px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none; /* REMOVES the underline */
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #fbcfe8; /* Changes color slightly when you hover over it */
-}
-
-/* --- FOOTER STYLES --- */
-footer {
-  background-color: #1f2937; /* Dark background */
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-/* Style the main container div */
-.footer-container {
-  max-width: 650px;
-  margin: 0 auto; /* Centers the div on the page */
-}
-
-footer h3 {
-  color: #fbcfe8;
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
-footer p {
-  color: #9ca3af;
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
   font-size: 14px;
+  padding: 5px 15px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #be185d;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: #f3f4f6;
+  border: none;
+  font-size: 22px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  background-color: #f8fafc;
+  padding: 100px 20px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 430px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  filter: grayscale(100%);
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.name-underline {
+  display: inline-block;
+  border-bottom: 5px solid #be185d; /* The pink line */
+  padding-bottom: 2px; /* Space between text and line */
+  line-height: 1.1; /* Keeps the line close to the text */
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Typing cursor animation */
+.cursor {
+  color: #be185d;
+  font-weight: 300;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Greeting text */
+.greeting {
+  font-weight: 600;
+  color: #be185d;
+  margin-top: 10px;
+}
+
+/* --- CONTENT SECTIONS --- */
+.content-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+h2 {
+  font-size: 32px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+/* --- PROJECT FILTER BUTTONS --- */
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: #f3f4f6;
+  border: 1px solid #e2e8f0;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background: #e2e8f0;
+}
+
+.filter-btn.active {
+  background: #be185d;
+  color: white;
+  border-color: #be185d;
+}
+
+/* --- PROJECT CARDS --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-card.hide {
+  display: none;
+}
+
+.card-header {
+  background: #be185d;
+  padding: 20px;
+}
+
+.card-header h3 {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-body p {
+  color: #475569;
+  font-size: 15px;
   margin-bottom: 20px;
 }
 
-/* Style the links div */
-.footer-links {
-  margin-bottom: 15px;
+.card-body {
+  padding: 25px;
   display: flex;
-  justify-content: center; /* Puts the links in the middle */
-  gap: 20px; /* Space between links */
+  flex-direction: column;
+  height: 100%; /* Makes sure the card stretches to fit all content */
+}
+
+.tech-tag {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #be185d;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.tech-tag {
+  background: #fce7f3;
+  color: #be185d;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* --- ABOUT & CONTACT TEXT --- */
+#about p,
+#contact p {
+  font-size: 16px;
+  color: #475569;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+#contact a {
+  color: #be185d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* --- CONTACT FORM --- */
+.my-form {
+  max-width: 500px;
+  margin-top: 30px;
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.my-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.my-form input,
+.my-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  background-color: white;
+}
+
+.my-form input:focus,
+.my-form textarea:focus {
+  outline: none;
+  border-color: #be185d;
+  box-shadow: 0 0 5px rgba(190, 24, 93, 0.2);
+}
+
+/* Inline form feedback message (JS feature) */
+.form-feedback {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  min-height: 20px;
+}
+
+.form-feedback.success {
+  color: #15803d;
+}
+
+.form-feedback.error {
+  color: #dc2626;
+}
+
+/* --- BUTTON --- */
+.hire-me-btn {
+  background: #111;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.hire-me-btn:hover {
+  background: #be185d;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #f8fafc;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
 }
 
 .footer-links a {
-  color: white;
+  color: #111;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #be185d; /* Pink hover effect */
+  color: #be185d;
 }
 
-/* Style the copyright div */
-.footer-copyright {
-  border-top: 1px solid #374151; /* A subtle line above the copyright */
-  padding-top: 20px;
+.copyright {
+  color: #94a3b8;
+  font-size: 14px;
   margin-top: 20px;
 }
 
-.footer-copyright p {
-  font-size: 12px;
-  color: bisque;
-  margin: 0;
+/* --- BACK TO TOP BUTTON --- */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #be185d;
+  color: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: transform 0.2s;
 }
 
-/* Styling the Dark Mode button so it fits in the nav bar */
-#theme-btn {
-  background: white;
+#topBtn:hover {
+  transform: translateY(-3px);
+}
+
+/* --- ACCESSIBILITY: keyboard focus --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #be185d;
+  outline-offset: 3px;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 160px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .underline {
+    margin: 0 auto 30px auto;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+}
+
+.project-link {
+  display: block;
+  margin-top: 15px;
   color: #be185d;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
   font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.project-img {
+  width: 100%;
+  height: 180px; /* Keeps all images the same height */
+  object-fit: cover; /* Crops the image nicely so it doesn't look squished */
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Container for the stacked images */
+.double-img {
+  display: block;        /* This stacks them one up, one down */
+  width: 100%;
+  height: auto;          /* Lets the container grow to fit both images */
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;   /* Light background if images don't load */
+}
+
+/* Style for each image */
+.double-img img {
+  width: 100%;           /* Makes each image full width */
+  height: 160px;         /* Adjust this number if you want them taller/shorter */
+  object-fit: cover;     /* Crops nicely */
+  display: block;        /* Removes tiny gaps between the images */
+  border-bottom: 2px solid white; /* Adds a clean white line between the two photos */
+}
+
+/* Removes the bottom line from the last image so it connects cleanly to the text */
+.double-img img:last-child {
+  border-bottom: none;
 }

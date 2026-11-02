@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Nurul Nazifa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV BAR -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">👩‍💻 NURUL NAZIFA</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section">
+      <h1>Contact Me</h1>
+      <p>Email: <a href="mailto:100685@siswa.unimas.my">100685@siswa.unimas.my</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/nurul-nazifa-6a45142a9" target="_blank">linkedin.com/in/nurul-nazifa-6a45142a9</a></p><br>
+      <p>If you have any questions or want to work together, feel free to send me a message!</p>
+
+      <form id="contactForm" onsubmit="sendMessage(event)" class="my-form" novalidate>
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" placeholder="Enter your name">
+
+        <label for="userEmail">Email:</label>
+        <input type="email" id="userEmail" placeholder="Enter your email">
+
+        <label for="userMessage">Message:</label>
+        <textarea id="userMessage" rows="4" placeholder="Enter your message"></textarea>
+
+        <p id="formFeedback" class="form-feedback"></p>
+
+        <button type="submit" class="hire-me-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:100685@siswa.unimas.my">Email</a>
+      <a href="https://www.linkedin.com/in/nurul-nazifa-6a45142a9" target="_blank">LinkedIn</a>
+    </div>
+    <p class="copyright">&copy; 2026 Nurul Nazifa. All rights reserved.</p>
+  </footer>
+
+  <button id="topBtn" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

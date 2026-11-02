@@ -3,83 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nurul Nazifa — Portfolio</title>
-  
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="style.css"> 
+  <title>Home — Nurul Nazifa</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation Bar at the very top -->
+  <!-- NAV BAR -->
   <header>
     <nav>
-      <a href="#home" class="logo">NURUL NAZIFA | Network Computing</a>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a href="index.html" class="logo">👩‍💻 NURUL NAZIFA</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
     </nav>
   </header>
 
   <main>
-
-    <!-- HOME -->
-    <section id="home">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Hi, I'm Nurul Nazifa Binti Kamrulzaman, a 3rd-year student at UNIMAS learning web application development.</p>
-      <a href="#about" class="btn" id="learn-more-btn">Learn more about me</a>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-image">
+          <img src="picture1.jpeg" alt="Portrait of Nurul Nazifa">
+        </div>
+        <div class="hero-text">
+          <h1>Hello, I'm <span class="name-underline"><span id="typedName">Nurul Nazifa</span><span class="cursor">|</span></span></h1>
+          <p>I'm a 3rd year Network Computing student at UNIMAS with a passion for creating meaningful digital experiences. I believe in writing clean code and continuously pushing myself to learn and grow.</p>
+          <p>I'm driven by challenges and motivated by the endless possibilities that technology offers to solve real world problems.</p>
+        </div>
+      </div>
     </section>
-
-    <!-- PROJECTS (Simple for now) -->
-    <section id="projects">
-      <h2>My Projects</h2>
-      <p>Here are some of the academic projects I have completed:</p>
-      
-      <!-- These are just simple text lines for now, no tables/grids -->
-      <ul>
-        <li><strong>Project 1:</strong> Personal Blog </li>
-        <li><strong>Project 2:</strong> Emergency Reporting System PKS</li>
-        <li><strong>Project 3:</strong> Fitlife Wellness Centre Database System</li>
-        <li><strong>Project 4:</strong> </li>
-        <li><strong>Project 5:</strong> </li>
-      </ul>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>My name is Nurul Nazifa Binti Kamrulzaman. I am currently in my 3rd year at UNIMAS. I am interested in learning web application development to gain new skills and build real projects.</p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:100685@siswa.unimas.my">100685@siswa.unimas.my</a></p>
-      
-    </section>
-
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="footer-container">
-      <!-- A div specifically to group the links -->
-      <div class="footer-links">
-        <a href="mailto:100685@siswa.unimas.my">Email</a>
-        <a href="#" target="_blank">LinkedIn</a>
-      </div>
-      
-      <!-- A div for the copyright text -->
-      <div>
-        <p>2026 Nurul Nazifa. All rights reserved.</p>
-      </div>
-
+    <div class="footer-links">
+      <a href="mailto:100685@siswa.unimas.my">Email</a>
+      <a href="https://www.linkedin.com/in/nurul-nazifa-6a45142a9" target="_blank">LinkedIn</a>
     </div>
+    <p class="copyright">&copy; 2026 Nurul Nazifa. All rights reserved.</p>
   </footer>
 
-  <!-- JAVASCRIPT LINK (Must be at the bottom) -->
-  <script src="script.js"></script>
+  <button id="topBtn" onclick="scrollToTop()" aria-label="Back to top">↑</button>
 
+  <script src="script.js"></script>
 </body>
-</html>stem for 
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Nurul Nazifa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV BAR -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">👩‍💻 NURUL NAZIFA</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section">
+      <h1>My Projects</h1>
+      <p class="section-desc">Here are some of the academic projects I have completed.</p>
+
+      <!-- Filter buttons (JS feature) -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="design">UI/UX Design</button>
+        <button class="filter-btn" data-filter="programming">Programming</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card" data-category="web">
+          <div class="card-header"><h3>Personal Blog</h3></div>
+          <div class="card-body">
+            <p>A personal blog website designed to share articles and thoughts, built with clean HTML and CSS.</p>
+            <span class="tech-tag">HTML &amp; CSS</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card" data-category="web">
+  <div class="card-header"><h3>Emergency Reporting System</h3></div>
+  <!-- NEW IMAGE ADDED HERE -->
+  <img src="ers.jpeg" alt="Emergency Reporting System interface" class="project-img">
+  
+  <div class="card-body">
+    <p>A web-based system for users to quickly report emergencies to local authorities with a simple form.</p>
+    <span class="tech-tag">HTML, CSS, JS</span>
+  </div>
+</div>
+
+        <!-- PROJECT 3 -->
+                <!-- PROJECT 3 (Fitlife) -->
+        <div class="project-card" data-category="web">
+          <div class="card-header"><h3>Fitlife Wellness Centre</h3></div>
+          
+          <!-- 2 PHOTOS SIDE BY SIDE -->
+          <div class="double-img">
+            <img src="database.jpeg" alt="Fitlife database system interface" onerror="this.style.display='none'">
+            <img src="homepage.jpeg" alt="Fitlife membership management" onerror="this.style.display='none'">
+          </div>
+          
+          <div class="card-body">
+            <p>A database system to manage customer records and gym memberships, including user login and data storage.</p>
+            <span class="tech-tag">Database</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 4 (KESTRA EV) -->
+                <!-- PROJECT 4 (KESTRA EV) -->
+        <div class="project-card" data-category="design">
+          <div class="card-header"><h3>KESTRA EV Smart Dashboard</h3></div>
+          
+          <!-- Make sure your image is named exactly kestra.jpg and is in the same folder -->
+          <img src="kestra.jpg" alt="KESTRA EV Dashboard interface" class="project-img" onerror="this.style.display='none'">
+          
+          <div class="card-body">
+            <p>A Human-Computer Interaction (HCI) project designing an in-car dashboard for Proton e.Mas. Focused on high readability in sunlight and one-thumb operability.</p>
+            <span class="tech-tag">Figma</span>
+            <span class="tech-tag">UI/UX</span>
+            <span class="tech-tag">HCI</span>
+            <a href="https://ceillavu.github.io/kestra-ev-dashboard/" target="_blank" class="project-link">View Live Prototype →</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 5 (WILDLIFE TRACKING) -->
+        <div class="project-card" data-category="programming">
+          <div class="card-header"><h3>Wildlife Tracking &amp; Reporting System</h3></div>
+          <div class="card-body">
+            <p>A console-based C++ application designed for conservation teams in remote areas. Features a comprehensive database for species management, sighting logs and automated high-priority conservation reports.</p>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Algorithms</span>
+            <span class="tech-tag">Data Structures</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:100685@siswa.unimas.my">Email</a>
+      <a href="https://www.linkedin.com/in/nurul-nazifa-6a45142a9" target="_blank">LinkedIn</a>
+    </div>
+    <p class="copyright">&copy; 2026 Nurul Nazifa. All rights reserved.</p>
+  </footer>
+
+  <button id="topBtn" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
